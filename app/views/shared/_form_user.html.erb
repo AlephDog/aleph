@@ -1,0 +1,45 @@
+<%= form_for @user do |f| %>
+  <p>
+  	<%= f.label 'Nombre completo' %>
+  	<%= f.text_field :fullname %>
+  </p>
+
+  <p>
+  	<%= f.label 'Nombre de usuario' %>
+  	<%= f.text_field :username %>
+  </p>
+
+  <p>
+  	<%= f.label 'Correo electronico' %>
+  	<%= f.email_field :email %>
+  </p>
+
+  <p>
+  	<%= f.label 'Contraseña' %>
+  	<%= f.password_field :password %>
+  </p>
+
+  <p>
+  	<%= f.label 'Confirmacion de la contraseña' %>
+  	<%= f.password_field :password_confirmation %>
+  </p>
+
+  <p>
+  	<%= f.label 'Descripcion' %>
+  	<%= f.text_area :description %>
+  </p>
+
+  <p>
+  	<%= f.label 'Escuela' %>
+  	<%= f.text_field :school %>
+  </p>
+
+  <p>
+  	<%= f.label 'Intereses' %>
+  	<%= f.text_area :interests %>
+  </p>
+
+  <p>
+  	<%= f.submit 'Guardar' %>
+  </p>
+<% end %>

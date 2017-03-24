@@ -1,0 +1,27 @@
+<h1>Users#index</h1>
+<table>
+	<thead>
+		<tr>
+			<th>No. de usuario</th>
+			<th>Nombre de usuario</th>
+			<th>Email</th>
+			<th>Escuela</th>
+			<th>Intereses</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each_with_index do |user, index| %>
+		  <tr>
+		  	<th><%= index + 1 %></th>
+		  	<th><%= link_to user.username, user_path(user) %></th>
+		  	<th><%= user.email %></th>
+		  	<th><%= user.school %></th>
+		  	<th><%= user.interests %></th>
+		  	<th><%= link_to 'Editar', edit_user_path(user) %>
+		  		<%= link_to 'Eliminar', user_path(user), method: :delete, data: {confirm: 'Neta corneta?'} %>
+		  	</th> 
+		  </tr>
+		<% end %>
+	</tbody>
+</table>

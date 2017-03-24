@@ -9,6 +9,10 @@
   </head>
 
   <body>
+  	<%= render 'shared/links' %>
+  	<% if flash[:success].present? %>
+  	  <p><strong><%= flash[:success] %></strong></p>
+	<% end %>
     <%= yield %>
   </body>
 </html>
