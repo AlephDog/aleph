@@ -12,7 +12,10 @@
   	<%= render 'shared/links' %>
   	<% if flash[:success].present? %>
   	  <p><strong><%= flash[:success] %></strong></p>
-	<% end %>
+	  <% end %>
+    <% if flash[:danger].present? %>
+      <p><strong><%= flash[:danger] %></strong></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

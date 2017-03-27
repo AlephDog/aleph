@@ -1,2 +1,10 @@
+<%= link_to 'Home', root_path %>
 <%= link_to 'Nuevo usuario', new_user_path %>
 <%= link_to 'Usuarios', users_path %>
+<%= link_to 'Nosotros', nosotros_path %>
+<%= link_to 'Contacto', contacto_path %>
+<% if logged_in? %>
+  <%= link_to 'Cerrar sesión', logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Inicio de sesión', login_path %>
+<% end %>
