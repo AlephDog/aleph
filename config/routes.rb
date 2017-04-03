@@ -4,5 +4,14 @@ Rails.application.routes.draw do
   	resources :users, only: [:show,:index,:destroy]
   	resources :professors
   	resources :subjects
+
+  	delete '/logout',to: 'sessions#destroy'
   end
+
+  namespace :estudiantes do 
+  	delete '/logout', to: 'sessions#destroy'
+  end
+
+  get '/login',to: 'sessions#new'
+  post '/login', to: 'sessions#create'
 end
